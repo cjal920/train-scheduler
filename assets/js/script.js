@@ -8,20 +8,15 @@ var config = {
 };
 firebase.initializeApp(config);
 
-// Create an instance of Firebase database
-var trainData = firebase.database();
+var database = firebase.database(); 
 
-// Create variables to reference the database
 var trainName = "";
 var destination = "";
 var firstTrainTime = "";
 var frequency = "";
 
-// Add-train input form
-// Collect data from form and send the data to Firebase
 $("#add-train").on("click", function (event) {
 
-  // Don't refresh the page
   event.preventDefault();
 
   trainName = $("#trainName-input").val().trim();
@@ -29,11 +24,7 @@ $("#add-train").on("click", function (event) {
   firstTrainTime = $("#firstTrainTime-input").val().trim();
   frequency = $("#frequency-input").val().trim();
 
-  // Grab data and push to Firebase database
-  // trainData = Firebase
-  // ref referencing Firebase database
-  // push data to Firebase database
-  trainData.ref().push({
+  database.ref().push({
       trainName: trainName,
       destination: destination,
       firstTrainTime: firstTrainTime,
@@ -41,10 +32,7 @@ $("#add-train").on("click", function (event) {
   })
 })
 
-// When childSnapshot is called this will populate trainTable 
-// on event listener
-// child_added parent is database and additional train is child
-trainData.ref().on("child_added", function (childSnapshot) {
+database.ref().on("child_added", function (childSnapshot) {
 
   // Use Moments.js to calculate "Next Arrival" when next train will arrive, relative to current time. 
   // Use Moments.js to calculate "Minutes Away" when next train will arrive in minutes
