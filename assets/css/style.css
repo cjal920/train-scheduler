@@ -1,7 +1,92 @@
-.header {
-    font-family: 'Grand Hotel', cursive;
+body    {
+    background: #000000;
     text-align: center;
-    font-size: 100px;
-    color: #cf0b0b;
-    /*color: #4c5092;*/
 }
+
+.jumbotron  {
+    background: #000000;
+    color: #f8f6e3;
+    padding-bottom: 10px;
+}
+
+.text-center    {
+    font-family: 'Limelight', cursive;
+    font-size: 100px;
+    border: #f3eec4 4px double;
+}
+
+.form   {
+    background: #f3eec4;
+}
+
+.form-group {
+    width: 100%;
+    margin: 0;
+    border: #4e4e4e 1px solid;
+}
+
+#input,
+#trainName-input,
+#trainLine-input,
+#destination-input,
+#firstTrainTime-input,
+#frequency-input    {
+    font-family: 'Architects Daughter', cursive;
+    font-size: 20px;
+    width: 100%;
+    height: 50px;
+    background: #f3eec4;
+    border-radius: 0;
+    color: #000000;
+    padding: 10px;
+    margin: 0;
+}
+
+#trainName-input,
+#trainLine-input,
+#destination-input,
+#firstTrainTime-input,
+#frequency-input   {
+    background: #ffffff;
+}
+
+#input  {
+    font-family: 'IM Fell English SC', serif;
+    text-align: left;
+}
+
+th  {
+    font-family: 'Limelight', cursive;
+    background: #f3eec4;
+    color: #000000;
+}
+
+.panel,
+.panel-heading,
+#trainTable  {
+    color: #f8f6e3;
+    font-family: 'Unica One', cursive;
+    margin: 0;
+}
+
+.panel-title    {
+    font-family: 'Limelight', cursive;
+    font-size: 50px;
+}
+
+#add-train  {
+    font-family: 'IM Fell English SC', serif;
+    font-size: 25px;
+    background: #f3eec4;
+    color: #000000;
+    margin: 20px;
+    padding: 40px;
+    border-radius: 50%;
+}
+
+#add-train:hover    {
+    background: #000000;
+    color: #f3eec4;
+    border: #f3eec4 1px solid;
+}
+ 

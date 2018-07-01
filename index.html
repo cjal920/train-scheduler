@@ -2,83 +2,68 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
-  <!-- Firebase Reference -->
-  
-
-  <!-- Moment.js Reference -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
-
-    <!-- CSS link -->
-    <link rel="stylesheet" href="assets/css/style.css">
-
-    <title>Silver Streak</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Caveat|Glass+Antiqua|IM+Fell+English+SC|Limelight|Shadows+Into+Light|Unica+One" rel="stylesheet">
+  <title>30TH ST STATION</title>
 </head>
 
 <body>
     <div class="container-fluid">
-
-        <!-- Jumbotron -->
-        <div class="jumbotron">
-            <h1 class="text-center">Silver Streak Station</h1>
-            <p></p>
-        </div>
-
-        <!-- Sign-up Form -->
-        <form role="form">
-            <div class="form-group">
-                <label for="trainName-input">Train Name:</label>
-                <!-- required will require users to enter actual data versus empty string -->
-                <input class="form-control" id="trainName-input" type="text" required>
-            </div>
-            <div class="form-group">
-                <label for="destination-input">Destination:</label>
-                <input class="form-control" id="destination-input" type="text" required>
-            </div>
-            <div class="form-group">
-                <label for="firstTrainTime-input">First Train Time (HH:mm - Military time):</label>
-                <input class="form-control" id="firstTrainTime-input" type="text" required>
-            </div>
-            <div class="form-group">
-                <label for="frequency-input">Frequency (in minutes)</label>
-                <input class="form-control" id="frequency-input" type="text" required>
-            </div>
-
-            <button class="btn btn-default" id="add-train" type="submit">Submit</button>
-        </form>
-
-        <br>
-        <br>
-        <br>
-
-        <!-- Add Train Panel-->
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">Current Train Schedule</h4>
-            </div>
-            <div class="panel-body">
-                <table id="trainTable" class="table table-hover table-bordered">
-                    <tr>
-                        <th>Train Name</th>
-                        <th>Destination</th>
-                        <th>Frequency</th>
-                        <th>Next Arrival</th>
-                        <th>Minutes Away</th>
-                    </tr>
-                </table>
-            </div>
-        </div>
-    </div>
-
-    <!-- Javascript link -->
-    <script src="assets/js/script.js"></script>
+		<div class="jumbotron">
+        	<h1 class="text-center">30TH STREET STATION</h1>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+						<form role="form">
+								<div class="form-group">
+									<label for="trainName-input" id="input">Train Name &#8212;</label>
+									<input class="form-control" id="trainName-input" type="text" required>
+								</div>
+								<div class="form-group">
+									<label for="destination-input" id="input">Destination &#8212;</label>
+									<input class="form-control" id="destination-input" type="text" required>
+								</div>
+								<div class="form-group">
+									<label for="firstTrainTime-input" id="input">First Departure Time (U.S. Army) &#8212;</label>
+									<input class="form-control" id="firstTrainTime-input" type="text" required>
+								</div>
+								<div class="form-group">
+									<label for="frequency-input" id="input">Frequency (in mins.) &#8212;</label>
+									<input class="form-control" id="frequency-input" type="text" required>
+								</div>
+									<button class="btn btn-default" id="add-train" type="submit">Add a Train &#9758;</button>
+						</form>
+				</div>
+				<div class="col-md-8">
+						<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">&#8212; ARRIVALS &#8212;</h4>
+								</div>
+								<div class="panel-body">
+									<table id="trainTable" class="table table-hover table-bordered">
+										<tr>
+											<th>TRAIN</th>
+											<th>DESTINATION</th>
+											<th>FREQUENCY</th>
+											<th>NEXT</th>
+											<th>WAIT TIME</th>
+										</tr>
+									</table>
+								</div>
+						</div>
+				</div>
+			</div>
+		</div>
+     
+	<script src="assets/js/script.js"></script>
+	
 </body>
-
 </html>
