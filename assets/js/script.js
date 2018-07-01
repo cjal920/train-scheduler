@@ -42,8 +42,6 @@ database.ref().on("child_added", function(childSnapshot) {
   var tMinutesTillTrain = tFrequency - tRemainder;
   var nextTrainArrival = moment().add(tMinutesTillTrain, "m").format("hh:mm A"); 
   $("#trainTable").append("<tr><td>" + childSnapshot.val().trainName + "</td><td>" + childSnapshot.val().destination + "</td><td>" + childSnapshot.val().frequency + "</td><td>" + nextTrainArrival + "</td><td>" + tMinutesTillTrain + "</td></td>");
-
-  console.log(moment());
 }); 
 
 setInterval(function () {
